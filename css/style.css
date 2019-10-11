@@ -1,0 +1,58 @@
+
+/*#basic-form input:invalid:not(:placeholder-shown) {border-color: red;}*/
+#basic-form input:valid:not(:placeholder-shown) {border-color: green;}
+.sendForm .submit:disabled{
+    border: 1px solid #f26522;
+    color: #f26522;
+    opacity: 0.6;
+}
+
+#basic-form input, #basic-form textarea {
+    border: 1px solid #ccc;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    vertical-align: middle;
+    color: #555;
+    background-color: #fff;
+    height: 40px;
+    padding: 4px 6px;
+    box-sizing: border-box!important;
+    -webkit-box-sizing: border-box!important;
+    -moz-box-sizing: border-box!important;
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+}
+
+#basic-form button.uk-button-success,
+#basic-form .getData.uk-button-success
+{
+    padding: 5px 20px;
+    margin: 0!important;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#basic-form table {
+	width:100%;
+}
+
+#basic-form td {
+    padding: 5px;
+}
+
+@media screen and (max-width: 480px) {
+    .invoice {
+        margin-top: 20px;
+    }
+	#basic-form input {
+		max-width: 135px;
+	}
+    
+}

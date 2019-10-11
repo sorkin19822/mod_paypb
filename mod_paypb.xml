@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.1.0" method="install">
+	<name>Форма приватбанка</name>
+	<author>Александр Сорокин</author>
+	<creationDate>08.06.2019</creationDate>
+	<copyright>Copyright (C) 2017 All rights reserved.</copyright>
+	<license>GNU General Public License</license>
+	<authorEmail>web@dobro-clinic.com</authorEmail>
+	<authorUrl>dobro-clinic.com</authorUrl>
+	<version>3.9.6</version>
+	<description>MOD_PAYB_XML_DESCRIPTION</description>
+	<files>
+		<filename>mod_paypb.xml</filename>
+		<filename module="mod_paypb">mod_paypb.php</filename>
+		<filename>index.html</filename>
+		<filename>service.php</filename>
+        <filename>helper.php</filename>
+		<filename>tmpl/default.php</filename>
+		<filename>tmpl/index.html</filename>
+	</files>
+	<languages>
+		<language tag="ru-RU">languages/ru-RU.mod_paypb.ini</language>
+		<language tag="ru-RU">languages/ru-RU.mod_paypb.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params"> <!-- здесь можно указать параметры -->
+			<fieldset name="basic">
+				<field name="publikKey"  type="text" default=""
+					   label="Публичный ключ"
+					   description="LiqPay" />
+				<field name="privateKey"  type="text" default=""
+					   label="Приватный ключ"
+					   description="LiqPay" />
+				<field name="sandBox" type="radio" default="0" label="Режим теста" description="">
+					<option value="0">Платим</option>
+					<option value="1">Не платим</option>
+				</field>
+			</fieldset>
+		</fields>
+		<fieldset name="advanced">
+			<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+			/>
+
+			<field
+					name="moduleclass_sfx"
+					type="textarea"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+					rows="3"
+			/>
+
+			<field
+					name="cache"
+					type="list"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC"
+					default="0"
+					filter="integer"
+			>
+				<option value="1">JGLOBAL_USE_GLOBAL</option>
+				<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+			</field>
+
+			<field
+					name="cache_time"
+					type="number"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+					default="0"
+					filter="integer"
+			/>
+
+			<field
+					name="cachemode"
+					type="hidden"
+					default="static"
+			>
+				<option value="static"></option>
+			</field>
+		</fieldset>
+	</config>
+
+
+</extension>
